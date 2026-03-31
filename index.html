@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>запись на охоту</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <meta
+      name="description"
+      content="Охотничий клуб: видео, горячие предложения, о нас и трофеи сезона."
+    />
+  </head>
+  <body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <header class="header container">
+      <a class="logo" href="#" aria-label="Главная">
+        <img src="/logo.png" alt="Охотничье поместье" />
+        <span>ОХОТНИЧЬЕ ПОМЕСТЬЕ</span>
+      </a>
+      <div class="header__side">
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#offers">Туры</a>
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#trophies">Трофеи</a>
+        </nav>
+        <div class="header-socials" aria-label="Социальные сети">
+          <a class="header-socials__link" href="#" aria-label="Telegram">
+            <img src="/telegram-svgrepo-com.svg" alt="" />
+          </a>
+          <a class="header-socials__link" href="#" aria-label="Max">
+            <img src="/Max_logo.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="video-block" id="video">
+        <div class="video-frame">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+            data-video-desktop="/src/video/video.mp4"
+            data-video-mobile="/src/video/video-mobile.mp4"
+          >
+            <source src="/src/video/video.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+        <div class="video-cta-wrap">
+          <p class="video-cta-title">Охота на гуся</p>
+          <a class="video-cta" href="#offers">Забронировать тур</a>
+        </div>
+      </section>
+
+      <section class="section section-wood" id="offers">
+        <div class="section-shell container">
+          <h2>Горячие предложения</h2>
+          <div class="cards">
+            <article class="card offer-card">
+              <h3>Тур на 3 дня</h3>
+              <p class="offer-card__meta">Заезд - 2 охоты в день - Выезд</p>
+              <p class="offer-card__price">от 900 бел. руб.</p>
+              <p class="offer-card__price offer-card__price--sub">от 33 000 рос. руб.</p>
+            </article>
+            <article class="card offer-card">
+              <h3>Тур на 4 дня</h3>
+              <p class="offer-card__meta">Заезд - 4 охоты в день - Выезд</p>
+              <p class="offer-card__price">от 1 200 бел. руб.</p>
+              <p class="offer-card__price offer-card__price--sub">от 44 000 рос. руб.</p>
+            </article>
+            <article class="card offer-card">
+              <h3>Тур на 5 дней</h3>
+              <p class="offer-card__meta">Заезд - 6 охот в день - Выезд</p>
+              <p class="offer-card__price">от 1 500 бел. руб.</p>
+              <p class="offer-card__price offer-card__price--sub">от 55 000 рос. руб.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wood section-forest" id="about">
+        <div class="section-shell container">
+          <h2>О нас</h2>
+          <p>
+            Мы организуем охотничьи туры более 12 лет: лицензии, опытные проводники,
+            проверенные маршруты и безопасность на каждом этапе выезда.
+          </p>
+          <div class="map-block about-map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=30.202878%2C55.184217&mode=whatshere&whatshere%5Bpoint%5D=30.202878%2C55.184217&whatshere%5Bzoom%5D=11&z=11"
+              title="Карта Витебска"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <a class="map-block__fallback" href="https://yandex.ru/maps/?ll=30.202878%2C55.184217&z=11&text=%D0%92%D0%B8%D1%82%D0%B5%D0%B1%D1%81%D0%BA" target="_blank" rel="noreferrer">
+              Открыть карту в Яндекс Картах
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wood" id="services">
+        <div class="section-shell container">
+          <h2>Услуги</h2>
+          <div class="service-plaques">
+            <article class="service-plaque">
+              <h3>Питание и проживание</h3>
+              <ul>
+                <li>Трехразовое питание</li>
+                <li>Комфортабельный дом</li>
+              </ul>
+              <div class="service-plaque__price">
+                <p>от 350 бел. руб.</p>
+                <p>от 12 500 рос. руб.</p>
+              </div>
+            </article>
+            <article class="service-plaque">
+              <h3>Сопровождение егеря</h3>
+              <ul>
+                <li>Проводник на маршруте</li>
+                <li>Подготовка точек охоты</li>
+              </ul>
+              <div class="service-plaque__price">
+                <p>от 220 бел. руб.</p>
+                <p>от 7 900 рос. руб.</p>
+              </div>
+            </article>
+            <article class="service-plaque">
+              <h3>Трансфер и логистика</h3>
+              <ul>
+                <li>Доставка до угодий</li>
+                <li>Помощь с размещением трофеев</li>
+              </ul>
+              <div class="service-plaque__price">
+                <p>от 180 бел. руб.</p>
+                <p>от 6 400 рос. руб.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="service-showcases">
+            <article class="service-showcase">
+              <div class="service-showcase__media">
+                <div class="service-slider">
+                  <button class="service-slider__nav" type="button" data-slider-prev aria-label="Предыдущее фото">
+                    <span aria-hidden="true">&lt;</span>
+                  </button>
+                  <div class="service-slider__viewport swiper js-service-swiper">
+                    <div class="service-slider__track swiper-wrapper">
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Охотничий дом для проживания гостей" />
+                        <figcaption>Уютный дом</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Охотничий дом для проживания гостей" />
+                        <figcaption>Теплая база</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Охотничий дом для проживания гостей" />
+                        <figcaption>Зона отдыха</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Охотничий дом для проживания гостей" />
+                        <figcaption>После выезда</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <button class="service-slider__nav" type="button" data-slider-next aria-label="Следующее фото">
+                    <span aria-hidden="true">&gt;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="service-showcase__content">
+                <h3>Проживание на базе</h3>
+                <p>
+                  Теплый дом, душ, кухня, зона отдыха и размещение рядом с охотничьими
+                  маршрутами. Сейчас стоит пробное фото - потом можно заменить на 4 ваших.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-showcase service-showcase--reverse">
+              <div class="service-showcase__media">
+                <div class="service-slider">
+                  <button class="service-slider__nav" type="button" data-slider-prev aria-label="Предыдущее фото">
+                    <span aria-hidden="true">&lt;</span>
+                  </button>
+                  <div class="service-slider__viewport swiper js-service-swiper">
+                    <div class="service-slider__track swiper-wrapper">
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Транспорт и сопровождение в охотничьем туре" />
+                        <figcaption>Маршрут дня</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Транспорт и сопровождение в охотничьем туре" />
+                        <figcaption>С егерем</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Транспорт и сопровождение в охотничьем туре" />
+                        <figcaption>Выезд к угодьям</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Транспорт и сопровождение в охотничьем туре" />
+                        <figcaption>Организация тура</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <button class="service-slider__nav" type="button" data-slider-next aria-label="Следующее фото">
+                    <span aria-hidden="true">&gt;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="service-showcase__content">
+                <h3>Логистика и сопровождение</h3>
+                <p>
+                  Подвоз к точкам охоты, помощь егеря, организация маршрута и поддержка на
+                  выезде. Блок уже готов под замену фото и наполнение реальным контентом.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-showcase">
+              <div class="service-showcase__media">
+                <div class="service-slider">
+                  <button class="service-slider__nav" type="button" data-slider-prev aria-label="Предыдущее фото">
+                    <span aria-hidden="true">&lt;</span>
+                  </button>
+                  <div class="service-slider__viewport swiper js-service-swiper">
+                    <div class="service-slider__track swiper-wrapper">
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Подготовка охотничьего маршрута и точек" />
+                        <figcaption>Точка охоты</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Подготовка охотничьего маршрута и точек" />
+                        <figcaption>Подготовка</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Подготовка охотничьего маршрута и точек" />
+                        <figcaption>Снаряжение</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Подготовка охотничьего маршрута и точек" />
+                        <figcaption>Перед выходом</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <button class="service-slider__nav" type="button" data-slider-next aria-label="Следующее фото">
+                    <span aria-hidden="true">&gt;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="service-showcase__content">
+                <h3>Подготовка маршрутов</h3>
+                <p>
+                  Подбираем точки, проверяем подходы, просчитываем безопасный маршрут и
+                  готовим выезд под конкретный сезон и трофей.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-showcase service-showcase--reverse">
+              <div class="service-showcase__media">
+                <div class="service-slider">
+                  <button class="service-slider__nav" type="button" data-slider-prev aria-label="Предыдущее фото">
+                    <span aria-hidden="true">&lt;</span>
+                  </button>
+                  <div class="service-slider__viewport swiper js-service-swiper">
+                    <div class="service-slider__track swiper-wrapper">
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Обработка трофея и помощь после охоты" />
+                        <figcaption>После охоты</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Обработка трофея и помощь после охоты" />
+                        <figcaption>Подготовка трофея</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Обработка трофея и помощь после охоты" />
+                        <figcaption>Упаковка</figcaption>
+                      </figure>
+                      <figure class="service-slide swiper-slide">
+                        <img src="/src/image/house.jpg" alt="Обработка трофея и помощь после охоты" />
+                        <figcaption>Возвращение</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <button class="service-slider__nav" type="button" data-slider-next aria-label="Следующее фото">
+                    <span aria-hidden="true">&gt;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="service-showcase__content">
+                <h3>Сопровождение после охоты</h3>
+                <p>
+                  Помогаем с обработкой трофея, упаковкой, размещением и организацией
+                  обратного выезда после завершения тура.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wood section-forest" id="trophies">
+        <div class="section-shell container">
+          <h2>Трофеи сезона</h2>
+          <div class="trophy-slider">
+            <button class="trophy-slider__nav" type="button" data-slider-prev aria-label="Предыдущие трофеи">
+              <span aria-hidden="true">&lt;</span>
+            </button>
+            <div class="trophy-slider__viewport swiper js-trophy-swiper">
+              <div class="trophy-slider__track swiper-wrapper">
+                <article class="trophy-slide swiper-slide">
+                  <img src="/medved.jpg" alt="Медведь как трофей сезона" />
+                </article>
+                <article class="trophy-slide swiper-slide">
+                  <img src="/chabanjpg.jpg" alt="Медведь как трофей сезона" />
+                </article>
+                <article class="trophy-slide swiper-slide">
+                  <img src="/medved.jpg" alt="Медведь как трофей сезона" />
+                </article>
+                <article class="trophy-slide swiper-slide">
+                  <img src="/medved.jpg" alt="Медведь как трофей сезона" />
+                </article>
+                <article class="trophy-slide swiper-slide">
+                  <img src="/chabanjpg.jpg" alt="Медведь как трофей сезона" />
+                </article>
+                <article class="trophy-slide swiper-slide">
+                  <img src="/medved.jpg" alt="Медведь как трофей сезона" />
+                </article>
+              </div>
+            </div>
+            <button class="trophy-slider__nav" type="button" data-slider-next aria-label="Следующие трофеи">
+              <span aria-hidden="true">&gt;</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <button class="to-top" type="button" aria-label="Наверх">Наверх</button>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
