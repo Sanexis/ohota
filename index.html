@@ -19,8 +19,8 @@
 
     <header class="header container">
       <a class="logo" href="#" aria-label="Главная">
-        <img src="/logo.png" alt="Охотничье поместье" />
-        <span>ОХОТНИЧЬЕ ПОМЕСТЬЕ</span>
+        <img src="/logo.svg" alt="Охотничье поместье" />
+        <!--<span>ОХОТНИЧЬЕ ПОМЕСТЬЕ</span>-->
       </a>
       <div class="header__side">
         <nav class="nav" aria-label="Основная навигация">
@@ -29,13 +29,26 @@
           <a href="#about">О нас</a>
           <a href="#trophies">Трофеи</a>
         </nav>
-        <div class="header-socials" aria-label="Социальные сети">
-          <a class="header-socials__link" href="#" aria-label="Telegram">
-            <img src="/telegram-svgrepo-com.svg" alt="" />
-          </a>
-          <a class="header-socials__link" href="#" aria-label="Max">
-            <img src="/Max_logo.svg" alt="" />
-          </a>
+        <div class="header-bottom">
+          <a class="header-phone" href="tel:+375336340148">+375 33 634 01 48</a>
+
+          <div class="header-socials" aria-label="Социальные сети">
+            <a class="header-socials__link"
+               href="https://t.me/+375336340148"
+               aria-label="Telegram"
+               target="_blank"
+               rel="noopener noreferrer">
+              <img src="/telegram-svgrepo-com.svg" alt="" />
+            </a>
+
+            <a class="header-socials__link"
+               href="https://max.by/chat/375336340148"
+               aria-label="Max"
+               target="_blank"
+               rel="noopener noreferrer">
+              <img src="/Max_logo.svg" alt="" />
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -49,10 +62,10 @@
             muted
             loop
             playsinline
-            preload="metadata"
+            preload="auto"
             aria-hidden="true"
-            data-video-desktop="/src/video/video.mp4"
-            data-video-mobile="/src/video/video-mobile.mp4"
+            data-video-desktop="./src/video/video.mp4"
+            data-video-mobile="./src/video/video-mobile.mp4"
           >
             <source src="/src/video/video.mp4" type="video/mp4" />
             Ваш браузер не поддерживает видео.
@@ -69,44 +82,25 @@
           <h2>Горячие предложения</h2>
           <div class="cards">
             <article class="card offer-card">
-              <h3>Тур на 3 дня</h3>
+              <h3>Тур на 2 дня охоты</h3>
               <p class="offer-card__meta">Заезд - 2 охоты в день - Выезд</p>
-              <p class="offer-card__price">от 900 бел. руб.</p>
-              <p class="offer-card__price offer-card__price--sub">от 33 000 рос. руб.</p>
+              <p class="offer-card__price">от 45 000 ₽</p>
+              <p class="offer-card__price offer-card__price--sub">от 1 600 бел. руб.</p>
+              <p class="offer-card__price offer-card__price--sub">Предоплата за бронирвание тура 10 000 ₽</p>
             </article>
             <article class="card offer-card">
-              <h3>Тур на 4 дня</h3>
+              <h3>Тур на 3 дня охоты</h3>
               <p class="offer-card__meta">Заезд - 4 охоты в день - Выезд</p>
-              <p class="offer-card__price">от 1 200 бел. руб.</p>
-              <p class="offer-card__price offer-card__price--sub">от 44 000 рос. руб.</p>
+              <p class="offer-card__price">от 59 000 ₽</p>
+              <p class="offer-card__price offer-card__price--sub">от 2 200 бел. руб.</p>
+              <p class="offer-card__price offer-card__price--sub">Предоплата за бронирвание тура 10 000 ₽</p>
             </article>
-            <article class="card offer-card">
+            <!--<article class="card offer-card">
               <h3>Тур на 5 дней</h3>
               <p class="offer-card__meta">Заезд - 6 охот в день - Выезд</p>
               <p class="offer-card__price">от 1 500 бел. руб.</p>
-              <p class="offer-card__price offer-card__price--sub">от 55 000 рос. руб.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-wood section-forest" id="about">
-        <div class="section-shell container">
-          <h2>О нас</h2>
-          <p>
-            Мы организуем охотничьи туры более 12 лет: лицензии, опытные проводники,
-            проверенные маршруты и безопасность на каждом этапе выезда.
-          </p>
-          <div class="map-block about-map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=30.202878%2C55.184217&mode=whatshere&whatshere%5Bpoint%5D=30.202878%2C55.184217&whatshere%5Bzoom%5D=11&z=11"
-              title="Карта Витебска"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <a class="map-block__fallback" href="https://yandex.ru/maps/?ll=30.202878%2C55.184217&z=11&text=%D0%92%D0%B8%D1%82%D0%B5%D0%B1%D1%81%D0%BA" target="_blank" rel="noreferrer">
-              Открыть карту в Яндекс Картах
-            </a>
+              <p class="offer-card__price offer-card__price--sub">от 55 000 ₽</p>
+            </article>-->
           </div>
         </div>
       </section>
@@ -123,7 +117,7 @@
               </ul>
               <div class="service-plaque__price">
                 <p>от 350 бел. руб.</p>
-                <p>от 12 500 рос. руб.</p>
+                <p>от 12 500 ₽</p>
               </div>
             </article>
             <article class="service-plaque">
@@ -134,7 +128,7 @@
               </ul>
               <div class="service-plaque__price">
                 <p>от 220 бел. руб.</p>
-                <p>от 7 900 рос. руб.</p>
+                <p>от 7 900 ₽</p>
               </div>
             </article>
             <article class="service-plaque">
@@ -145,7 +139,7 @@
               </ul>
               <div class="service-plaque__price">
                 <p>от 180 бел. руб.</p>
-                <p>от 6 400 рос. руб.</p>
+                <p>от 6 400 ₽</p>
               </div>
             </article>
           </div>
@@ -184,10 +178,19 @@
               </div>
               <div class="service-showcase__content">
                 <h3>Проживание на базе</h3>
-                <p>
-                  Теплый дом, душ, кухня, зона отдыха и размещение рядом с охотничьими
-                  маршрутами. Сейчас стоит пробное фото - потом можно заменить на 4 ваших.
-                </p>
+                  <div class="service-plaques">
+                    <article class="service-plaque">
+                      <h3>Питание и проживание</h3>
+                      <ul>
+                        <li>Трехразовое питание</li>
+                        <li>Комфортабельный дом</li>
+                      </ul>
+                      <div class="service-plaque__price">
+                        <p>от 350 бел. руб.</p>
+                        <p>от 12 500 ₽</p>
+                      </div>
+                    </article>
+                  </div>
               </div>
             </article>
 
@@ -310,6 +313,24 @@
                 </p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wood section-forest" id="about">
+        <div class="section-shell container">
+          <h2>О нас</h2>
+          <p>
+            Мы организуем охотничьи туры более 12 лет: лицензии, опытные проводники,
+            проверенные маршруты и безопасность на каждом этапе выезда.
+          </p>
+          <div class="map-block about-map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=29.822718879316966%2C54.994496353338285&z=8&pt=29.822718879316966,54.994496353338285,pm2rdm"
+              title="Карта"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>

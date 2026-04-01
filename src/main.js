@@ -81,24 +81,29 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 document.querySelectorAll('.js-service-swiper').forEach((element) => {
   const slider = element.closest('.service-slider')
+  if (!slider) return
 
   new Swiper(element, {
     modules: [Autoplay, Navigation],
     loop: true,
     slidesPerView: 1,
-    speed: 650,
-    allowTouchMove: false,
-    simulateTouch: false,
-    grabCursor: false,
+
+    speed: 900,
+
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
+
     navigation: {
-      prevEl: slider?.querySelector('[data-slider-prev]'),
-      nextEl: slider?.querySelector('[data-slider-next]'),
+      prevEl: slider.querySelector('[data-slider-prev]'),
+      nextEl: slider.querySelector('[data-slider-next]'),
     },
+
+    allowTouchMove: true,
+    simulateTouch: true,
+    grabCursor: true,
   })
 })
 
