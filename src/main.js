@@ -42,11 +42,28 @@ if (heroVideo) {
 
 const toTopButton = document.querySelector('.to-top')
 
+const burger = document.querySelector('.burger')
+const nav = document.querySelector('.nav')
+
+if (burger && nav) {
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active')
+    burger.classList.toggle('active')
+  })
+}
+
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active')
+    burger.classList.remove('active')
+  })
+})
+
 if (toTopButton) {
   const toggleToTopButton = () => {
     const doc = document.documentElement
     const scrollableHeight = doc.scrollHeight - window.innerHeight
-    const middlePoint = scrollableHeight * 0.5
+    const middlePoint = scrollableHeight * 0.15
 
     toTopButton.classList.toggle('is-visible', window.scrollY >= middlePoint)
   }
