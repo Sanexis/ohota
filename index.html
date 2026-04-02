@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>запись на охоту</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -26,8 +26,8 @@
         <nav class="nav" aria-label="Основная навигация">
           <a href="#offers">Туры</a>
           <a href="#services">Услуги</a>
-          <a href="#about">О нас</a>
           <a href="#trophies">Трофеи</a>
+          <a href="#about">О нас</a>
         </nav>
         <div class="header-bottom">
           <a class="header-phone" href="tel:+375336340148">+375 33 620 76 65</a>
@@ -81,28 +81,41 @@
             </h1>
           </div>
           <div class="hero-divider"></div>
-          <p class="video-cta-title">Туры "под ключ" в Витебской области</p>
+          <p
+            class="video-cta-title"
+            data-text='Туры "под ключ" в Витебской области'
+          >
+            Туры "под ключ" в Витебской области
+          </p>
           <a class="video-cta" href="#offers">Забронировать тур</a>
         </div>
       </section>
 
       <section class="section section-wood" id="offers">
         <div class="section-shell container">
-          <h2>Горячие предложения</h2>
+          <h2>
+            <div
+              class="hero-title"
+              data-text="ОХОТА НА ГУСЯ"
+              style="--hero-size: clamp(20px, 6vw, 42px);"
+            >
+              ОХОТА НА ГУСЯ
+            </div>
+          </h2>
           <div class="cards">
             <article class="card offer-card">
               <h3>Тур на 2 дня охоты</h3>
-              <p class="offer-card__meta">Заезд - 2 охоты в день - Выезд</p>
-              <p class="offer-card__price">от 45 000 ₽</p>
-              <p class="offer-card__price offer-card__price--sub">от 1 600 бел. руб.</p>
-              <p class="offer-card__price offer-card__price--sub">Предоплата за бронирвание тура 10 000 ₽</p>
+              <p class="offer-card__meta">День заезда - 2 дня охоты - День выезда</p>
+              <p class="offer-card__price offer-card__price--sub">92 000 ₽</p>
+              <p class="offer-card__redprice">от 45 000 ₽</p>
+              <p class="offer-card__price__title">Предоплата за бронирвание тура 10 000 ₽</p>
             </article>
             <article class="card offer-card">
               <h3>Тур на 3 дня охоты</h3>
-              <p class="offer-card__meta">Заезд - 4 охоты в день - Выезд</p>
-              <p class="offer-card__price">от 59 000 ₽</p>
-              <p class="offer-card__price offer-card__price--sub">от 2 200 бел. руб.</p>
-              <p class="offer-card__price offer-card__price--sub">Предоплата за бронирвание тура 10 000 ₽</p>
+              <p class="offer-card__meta">День заезда - 3 дня охоты - День выезда</p>
+              <p class="offer-card__price offer-card__price--sub">135 000 ₽</p>
+              <p class="offer-card__redprice">от 59 000 ₽</p>
+              <p class="offer-card__price__title">Предоплата за бронирвание тура 10 000 ₽</p>
             </article>
             <!--<article class="card offer-card">
               <h3>Тур на 5 дней</h3>
@@ -116,7 +129,35 @@
 
       <section class="section section-wood" id="services">
         <div class="section-shell container">
-          <h2>Услуги</h2>
+          <h2>
+            <div
+              class="hero-title"
+              data-text="В стоимоть тура входит"
+              style="--hero-size: clamp(20px, 6vw, 42px);"
+            >
+              В стоимоть тура входит
+            </div>
+          </h2>
+          <div class="service-plaques">
+            <article class="service-plaque">
+              <ul>
+                <li>Оформление разрешения на ввоз оружия;</li>
+                <li>Дегустация безалкогольных и алкогольных напитков собственного производства в день заезда;</li>
+                <li>Организация двух утренних и двух вечерних охот “под ключ” / Организация трех утренних и трех вечерних охот “под ключ”;</li>
+                <li>Банный комплекс на 3 часа в любой день по согласованию;</li>
+                <li>Пользование беседкой с мангалом на 8 часов в любой день по согласованию;</li>
+                <li>Добыча 10 особей (добыча большего кол-ва 800₽. - одна особь.</li>
+              </ul>
+            </article>
+          <h2>
+            <div
+              class="hero-title"
+              data-text="Услуги"
+              style="--hero-size: clamp(20px, 6vw, 42px);"
+            >
+              Услуги
+            </div>
+          </h2>
           <!--<div class="service-plaques">
             <article class="service-plaque">
               <h3>Питание и проживание</h3>
@@ -186,16 +227,19 @@
                 </div>
               </div>
               <div class="service-showcase__content">
-                <h3>Услуги</h3>
+                <h3>Питание и проживание</h3>
                   <div class="service-plaques">
                     <article class="service-plaque">
-                      <h3>Питание и проживание</h3>
+                      <h3>Питание</h3>
                         <ul>
-                          <li>Проживание: 3 000 ₽/сутки</li>
-                          <li>Питание: 5 500 ₽/сутки</li>
-                        </ul> <div class="service-plaque__price"></div>
-                      <h3>Аренда оружия: 4 830 ₽/сутки</h3>
-                      <h3>Патроны: 215 - 405 ₽/шт.</h3>
+                          <li>Трехразовое разнообразное питание на базе, а также перекусы с собой на охоту - 5 500 ₽/сутки</li>
+                        </ul>
+                        <div class="service-plaque__price"></div>
+                      <h3>Проживание</h3>
+                        <ul>
+                          <li>Проживание в комфортабельных номерах <br> на базе - 3 300 ₽/сутки</li>
+                        </ul>
+                        <div class="service-plaque__price"></div>
                     </article>
                   </div>
               </div>
@@ -233,14 +277,30 @@
                 </div>
               </div>
               <div class="service-showcase__content">
-                <h3>Логистика и сопровождение</h3>
-                <p>
-                  Подвоз к точкам охоты, помощь егеря, организация маршрута и поддержка на
-                  выезде. Блок уже готов под замену фото и наполнение реальным контентом.
-                </p>
+                <h3>Дополнительно</h3>
+                  <div class="service-plaques">
+                    <article class="service-plaque">
+                      <ul>
+                        <li>Аренда ружья - 4 800 ₽/сутки</li>
+                      </ul>
+                      <div class="service-plaque__price"></div>
+                      <ul>
+                        <li>Патроны - 215 ₽/сутки</li>
+                      </ul>
+                      <div class="service-plaque__price"></div>
+                      <ul>
+                        <li>Продление тура на сутки - 8 100 ₽/сутки</li>
+                      </ul>
+                      <div class="service-plaque__price"></div>
+                      <ul>
+                        <li>Баня на 3 часа - 5 850 ₽/сутки</li>
+                      </ul>
+                      <div class="service-plaque__price"></div>
+                    </article>
+                  </div>
               </div>
             </article>
-
+<!--
             <article class="service-showcase">
               <div class="service-showcase__media">
                 <div class="service-slider">
@@ -323,28 +383,19 @@
           </div>
         </div>
       </section>
-
-      <section class="section section-wood section-forest" id="about">
-        <div class="section-shell container">
-          <h2>О нас</h2>
-          <p>
-            Мы организуем охотничьи туры более 12 лет: лицензии, опытные проводники,
-            проверенные маршруты и безопасность на каждом этапе выезда.
-          </p>
-          <div class="map-block about-map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=29.822718879316966%2C54.994496353338285&z=8&pt=29.822718879316966,54.994496353338285,pm2rdm"
-              title="Карта"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+       -->
 
       <section class="section section-wood section-forest" id="trophies">
         <div class="section-shell container">
-          <h2>Трофеи сезона</h2>
+          <h2>
+            <div
+              class="hero-title"
+              data-text="Трофеи"
+              style="--hero-size: clamp(20px, 6vw, 42px);"
+            >
+              Трофеи
+            </div>
+          </h2>
           <div class="trophy-slider">
             <button class="trophy-slider__nav" type="button" data-slider-prev aria-label="Предыдущие трофеи">
               <span aria-hidden="true">&lt;</span>
@@ -374,6 +425,34 @@
             <button class="trophy-slider__nav" type="button" data-slider-next aria-label="Следующие трофеи">
               <span aria-hidden="true">&gt;</span>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wood section-forest" id="about">
+        <div class="section-shell container">
+          <h2>
+            <div
+              class="hero-title"
+              data-text="О нас"
+              style="--hero-size: clamp(20px, 6vw, 42px);"
+            >
+              О нас
+            </div>
+          </h2>
+          <p>
+            Мы организуем охотничьи туры более 12 лет: лицензии, опытные егеря, проверенные маршруты и безопасность на каждом этапе охоты.
+            Охотничье хозяйство «Охотничье поместье» расположено на территории Бешенковичского, Витебского и Сенненского районов Витебской области.
+            Общая площадь территории охотничьего хозяйства составляет 58,0 тыс. га в том числе: лесные охотничьи угодья – 25,2 тыс. га, полевые охотничьи угодья – 26,8 тыс. га, водно-болотные охотничьи угодья – 6 тыс. га.
+            <br>Наши угодья богаты зверем и птицей, обитающими в лесной зоне Центральной Европы.
+          </p>
+          <div class="map-block about-map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=29.822718879316966%2C54.994496353338285&z=8&pt=29.822718879316966,54.994496353338285,pm2rdm"
+              title="Карта"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>

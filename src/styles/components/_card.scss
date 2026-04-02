@@ -20,7 +20,7 @@
 .offer-card {
   position: relative;
   padding: 22px 20px 28px;
-  border: 1px solid rgb(188 144 73 / 0.85);
+  border: 2px solid #34342A;
   border-radius: 0;
   clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
   background:
@@ -72,12 +72,13 @@
 }
 
 .offer-card__price--sub {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   color: #f5e6c8;
   font-family: var(--font-body);
   font-size: clamp(0.95rem, 1.4vw, 1.1rem);
   font-weight: 600;
+  text-decoration: line-through;
 }
 
 .offer-card:hover {
