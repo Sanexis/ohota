@@ -124,6 +124,21 @@ document.querySelectorAll('.js-service-swiper').forEach((element) => {
   })
 })
 
+const modal = document.getElementById('booking-modal')
+
+document.querySelectorAll('[data-open-modal]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault()
+    modal.classList.add('active')
+  })
+})
+
+document.querySelectorAll('[data-close-modal]').forEach(el => {
+  el.addEventListener('click', () => {
+    modal.classList.remove('active')
+  })
+})
+
 const trophySwiperElement = document.querySelector('.js-trophy-swiper')
 
 if (trophySwiperElement) {
@@ -131,7 +146,7 @@ if (trophySwiperElement) {
 
   new Swiper(trophySwiperElement, {
     modules: [Autoplay, Navigation],
-    loop: false,
+    loop: true,
     speed: 700,
     spaceBetween: 16,
     slidesPerView: 1,
