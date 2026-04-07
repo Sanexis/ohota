@@ -1,80 +1,11 @@
 import Swiper from 'swiper'
-import { Autoplay, Navigation } from 'swiper/modules'
+import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import './styles/main.scss'
 
 document.documentElement.classList.add('is-loaded')
-
-const heroVideo = document.querySelector('.hero-video')
-
-if (heroVideo) {
-  const heroVideoSource = heroVideo.querySelector('source')
-  const mobileMediaQuery = window.matchMedia('(max-width: 525px)')
-
-  const updateHeroVideo = () => {
-    const nextSrc = mobileMediaQuery.matches
-      ? heroVideo.dataset.videoMobile
-      : heroVideo.dataset.videoDesktop
-
-    if (!heroVideoSource || !nextSrc || heroVideoSource.getAttribute('src') === nextSrc) {
-      return
-    }
-
-    heroVideoSource.setAttribute('src', nextSrc)
-    heroVideo.load()
-
-    const playPromise = heroVideo.play()
-
-    if (playPromise?.catch) {
-      playPromise.catch(() => {})
-    }
-  }
-
-  updateHeroVideo()
-
-  if (mobileMediaQuery.addEventListener) {
-    mobileMediaQuery.addEventListener('change', updateHeroVideo)
-  } else {
-    mobileMediaQuery.addListener(updateHeroVideo)
-  }
-}
-
-const toTopButton = document.querySelector('.to-top')
-
-const burger = document.querySelector('.burger')
-const nav = document.querySelector('.nav')
-
-if (burger && nav) {
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active')
-    burger.classList.toggle('active')
-  })
-}
-
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('active')
-    burger.classList.remove('active')
-  })
-})
-
-if (toTopButton) {
-  const toggleToTopButton = () => {
-    const doc = document.documentElement
-    const scrollableHeight = doc.scrollHeight - window.innerHeight
-    const middlePoint = scrollableHeight * 0.15
-
-    toTopButton.classList.toggle('is-visible', window.scrollY >= middlePoint)
-  }
-
-  window.addEventListener('scroll', toggleToTopButton, { passive: true })
-  toggleToTopButton()
-
-  toTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  })
-}
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -96,92 +27,62 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   })
 })
 
+const tourSwiper = document.querySelector('.js-tour-swiper')
+
+if (tourSwiper) {
+  new Swiper(tourSwiper, {
+    modules: [Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    speed: 650,
+    pagination: {
+      el: '.tour-swiper__pagination',
+      clickable: true,
+    },
+  })
+}
+
 document.querySelectorAll('.js-service-swiper').forEach((element) => {
-  const slider = element.closest('.service-slider')
-  if (!slider) return
+  const prevEl = element.querySelector('.service-media__nav--prev')
+  const nextEl = element.querySelector('.service-media__nav--next')
 
   new Swiper(element, {
-    modules: [Autoplay, Navigation],
+    modules: [Navigation],
     loop: true,
     slidesPerView: 1,
-
-    speed: 900,
-
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-
-    navigation: {
-      prevEl: slider.querySelector('[data-slider-prev]'),
-      nextEl: slider.querySelector('[data-slider-next]'),
-    },
-
-    allowTouchMove: true,
-    simulateTouch: true,
-    grabCursor: true,
-  })
-})
-
-const modal = document.getElementById('booking-modal')
-
-document.querySelectorAll('[data-open-modal]').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault()
-    modal.classList.add('active')
-  })
-})
-
-document.querySelectorAll('[data-close-modal]').forEach(el => {
-  el.addEventListener('click', () => {
-    modal.classList.remove('active')
-  })
-})
-
-const trophySwiperElement = document.querySelector('.js-trophy-swiper')
-
-if (trophySwiperElement) {
-  const slider = trophySwiperElement.closest('.trophy-slider')
-
-  new Swiper(trophySwiperElement, {
-    modules: [Autoplay, Navigation],
-    loop: true,
-    speed: 700,
-    spaceBetween: 16,
-    slidesPerView: 1,
-    allowTouchMove: false,
-    simulateTouch: false,
-    grabCursor: false,
+    speed: 650,
     watchOverflow: true,
     observer: true,
     observeParents: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
     navigation: {
-      prevEl: slider?.querySelector('[data-slider-prev]'),
-      nextEl: slider?.querySelector('[data-slider-next]'),
+      prevEl,
+      nextEl,
+    },
+  })
+})
+
+const trophiesSwiper = document.querySelector('.js-trophies-swiper')
+
+if (trophiesSwiper) {
+  new Swiper(trophiesSwiper, {
+    modules: [Navigation],
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1.18,
+    spaceBetween: 24,
+    speed: 700,
+    navigation: {
+      prevEl: '.trophies-swiper__nav--prev',
+      nextEl: '.trophies-swiper__nav--next',
     },
     breakpoints: {
-      0: {
-        allowTouchMove: true,
-        simulateTouch: true,
-        grabCursor: true,
-      },
       641: {
-        slidesPerView: 2,
-        allowTouchMove: false,
-        simulateTouch: false,
-        grabCursor: false,
+        slidesPerView: 1.45,
+        spaceBetween: 28,
       },
-      901: {
-        slidesPerView: 3,
-        allowTouchMove: false,
-        simulateTouch: false,
-        grabCursor: false,
+      1024: {
+        slidesPerView: 1.95,
+        spaceBetween: 34,
       },
     },
   })

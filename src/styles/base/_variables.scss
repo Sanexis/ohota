@@ -1,21 +1,21 @@
 :root {
   --font-body: 'Manrope', 'Segoe UI', sans-serif;
-  --font-heading: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
 
-  --color-text: #223127;
-  --color-heading: #182215;
-  --color-muted: #4c5f4b;
-  --color-surface: #ffffff;
-  --color-border: #cfd8c7;
-  --color-brand: #3f6c2a;
-  --color-brand-strong: #2f521f;
+  --color-text: #f2eee3;
+  --color-heading: #fffaf0;
+  --color-muted: #d9cfbd;
+  --color-surface: #0c0c0c;
+  --color-border: #7d7154;
+  --color-brand: #d9c88f;
+  --color-brand-strong: #ffe600;
 
   --radius-m: 16px;
   --radius-l: 24px;
 
   --shadow-m: 0 14px 35px -20px rgb(2 6 23 / 0.35);
 
-  --container-width: 1120px;
+  --container-width: 1280px;
   --container-padding: 24px;
 }
 
