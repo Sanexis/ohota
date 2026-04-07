@@ -23,28 +23,43 @@
           style="--hero-bg-image: url('%BASE_URL%hero-bg.jpg')"
         ></div>
 
-        <header class="hero-header">
+        <header class="hero-header js-site-header">
           <div class="hero-header__inner container">
-            <nav class="hero-nav" aria-label="Основная навигация">
-              <a href="#about">О нас</a>
-              <a href="#tours">Туры</a>
-              <a href="#services">Услуги</a>
-              <a href="#trophies">Трофеи</a>
-            </nav>
-
             <a class="hero-logo" href="#top" aria-label="Охотничье поместье">
               <img src="/logo.svg" alt="Охотничье поместье" />
             </a>
 
-            <div class="hero-contact">
-              <a class="hero-contact__phone" href="tel:+375445607774">+375 (44) 560-77-74</a>
-              <div class="hero-contact__socials" aria-label="Социальные сети">
-                <a href="https://t.me/+375445607774" aria-label="Telegram">
-                  <img src="/telegram-svgrepo-com.svg" alt="" />
-                </a>
-                <a href="https://max.ru/chat/+375445607774" aria-label="Max">
-                  <img src="/Max_logo.svg" alt="" />
-                </a>
+            <button
+              class="hero-header__burger"
+              type="button"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="hero-header__panel" id="mobile-menu">
+              <nav class="hero-nav" aria-label="Основная навигация">
+                <a href="#about">О нас</a>
+                <a href="#tours">Туры</a>
+                <a href="#services">Услуги</a>
+                <a href="#trophies">Трофеи</a>
+                <a href="#contacts">Контакты</a>
+              </nav>
+
+              <div class="hero-contact">
+                <a class="hero-contact__phone" href="tel:+375445607774">+375 (44) 560-77-74</a>
+                <div class="hero-contact__socials" aria-label="Социальные сети">
+                  <a href="https://t.me/+375445607774" aria-label="Telegram">
+                    <img src="/telegram-svgrepo-com.svg" alt="" />
+                  </a>
+                  <a href="https://max.ru/chat/+375445607774" aria-label="Max">
+                    <img src="/Max_logo.svg" alt="" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -54,7 +69,7 @@
           <div class="hero-card">
             <h1>ОХОТА НА ГУСЯ</h1>
             <p>Туры «под ключ» в Витебской области</p>
-            <a class="hero-card__button" href="#tours">Забронировать тур</a>
+            <a class="hero-card__button js-booking-trigger" href="#">Забронировать тур</a>
           </div>
         </div>
 
@@ -101,7 +116,7 @@
                   <p>День заезда - 2 дня охоты - День выезда</p>
                   <p class="tour-slide__old-price">92 000 ₽</p>
                   <p class="tour-slide__price">от 45 000 ₽</p>
-                  <a class="tour-slide__button" href="#top">Забронировать тур</a>
+                  <a class="tour-slide__button js-booking-trigger" href="#">Забронировать тур</a>
                   <small>Предоплата за бронирование тура 10 000 ₽</small>
                 </div>
                 <div class="tour-slide__media" data-file="Осень 2025" style="--tour-image: url('/tour_1.jpg')"></div>
@@ -113,7 +128,7 @@
                   <p>День заезда - 3 дня охоты - День выезда</p>
                   <p class="tour-slide__old-price">135 000 ₽</p>
                   <p class="tour-slide__price">от 59 000 ₽</p>
-                  <a class="tour-slide__button" href="#top">Забронировать тур</a>
+                  <a class="tour-slide__button js-booking-trigger" href="#">Забронировать тур</a>
                   <small>Предоплата за бронирование тура 10 000 ₽</small>
                 </div>
                 <div class="tour-slide__media" data-file="Зима 2026" style="--tour-image: url('/tour_2.jpg')"></div>
@@ -333,6 +348,23 @@
         </div>
       </section>
     </main>
+
+    <div class="booking-modal" aria-hidden="true">
+      <div class="booking-modal__backdrop js-booking-close"></div>
+      <div class="booking-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+        <button class="booking-modal__close js-booking-close" type="button" aria-label="Закрыть окно"></button>
+        <h3 id="booking-modal-title">Связаться с нами</h3>
+        <p>Чтобы с нами связаться, используйте мессенджеры.</p>
+        <div class="booking-modal__actions">
+          <a href="https://t.me/+375445607774" aria-label="Telegram" target="_blank" rel="noreferrer">
+            <img src="/telegram-svgrepo-com.svg" alt="Telegram" />
+          </a>
+          <a href="https://max.ru/chat/+375445607774" aria-label="Max" target="_blank" rel="noreferrer">
+            <img src="/Max_logo.svg" alt="Max" />
+          </a>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
