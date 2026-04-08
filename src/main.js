@@ -74,6 +74,17 @@ mobileBreakpoint.addEventListener('change', (event) => {
   syncHeaderHeight()
 })
 
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.hero-header__inner');
+
+  if (window.scrollY > 50) {
+    header.classList.add('header--small');
+  } else {
+    header.classList.remove('header--small');
+  }
+});
+
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     const targetId = link.getAttribute('href')
