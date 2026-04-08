@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>запись на охоту</title>
+    <title>Охота на гуся в Беларуси - туры под ключ в Витебской области</title>
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -11,17 +11,35 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta
       name="description"
-      content="Запись на охоту: туры на гуся, проживание, услуги и трофеи в Витебской области."
+      content="Охота на гуся в Беларуси с опытными егерями: туры под ключ в Витебской области, лицензии, проживание, питание, аренда оружия и организация охоты."
     />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Охота на гуся в Беларуси - туры под ключ в Витебской области" />
+    <meta property="og:description" content="Охота на гуся в Беларуси с опытными егерями: туры под ключ в Витебской области, лицензии, проживание, питание, аренда оружия и организация охоты." />
+    <meta property="og:image" content="/hero-bg.jpg" />
+    <meta property="og:image:alt" content="Охота на гуся в Беларуси" />
+    <meta property="og:site_name" content="Охотничье поместье" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Охота на гуся в Беларуси - туры под ключ в Витебской области" />
+    <meta name="twitter:description" content="Охота на гуся в Беларуси с опытными егерями: туры под ключ в Витебской области, лицензии, проживание, питание, аренда оружия и организация охоты." />
+    <meta name="twitter:image" content="/hero-bg.jpg" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
   </head>
   <body>
-    <main class="landing">
-      <section class="hero" id="top">
-        <div
-          class="hero__backdrop"
-          aria-hidden="true"
-          style="--hero-bg-image: url('%BASE_URL%hero-bg.jpg')"
-        ></div>
+    <main class="landing" id="content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__backdrop" aria-hidden="true">
+          <video
+            class="hero__video js-hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/hero-bg.jpg"
+          ></video>
+        </div>
 
         <header class="hero-header js-site-header">
           <div class="hero-header__inner container">
@@ -53,10 +71,10 @@
               <div class="hero-contact">
                 <a class="hero-contact__phone" href="tel:+375445607774">+375 (44) 560-77-74</a>
                 <div class="hero-contact__socials" aria-label="Социальные сети">
-                  <a href="https://t.me/+375445607774" aria-label="Telegram">
+                  <a href="https://t.me/+375445607774" aria-label="Telegram" target="_blank" rel="noreferrer">
                     <img src="/telegram-svgrepo-com.svg" alt="" />
                   </a>
-                  <a href="https://max.ru/chat/+375445607774" aria-label="Max">
+                  <a href="https://max.ru/chat/+375445607774" aria-label="Max" target="_blank" rel="noreferrer">
                     <img src="/Max_logo.svg" alt="" />
                   </a>
                 </div>
@@ -66,84 +84,87 @@
         </header>
 
         <div class="hero__body container">
-          <div class="hero-card">
-            <h1>ОХОТА НА ГУСЯ</h1>
+          <article class="hero-card">
+            <h1 id="hero-title"><span>ОХОТА</span> <span>НА ГУСЯ</span></h1>
             <p>Туры «под ключ» в Витебской области</p>
-            <a class="hero-card__button js-booking-trigger" href="#">Забронировать тур</a>
-          </div>
+            <a class="hero-card__button js-booking-trigger" href="#">
+              <span>Забронировать тур</span>
+              <img src="/ptichka.svg" alt="" aria-hidden="true" />
+            </a>
+          </article>
         </div>
 
         <img class="hero__edge" src="/ladder.svg" alt="" aria-hidden="true" />
       </section>
 
-      <section class="goose section container" id="about">
+      <section class="goose section container" id="about" aria-labelledby="about-title">
         <img class="goose" src="/goose.svg" alt="" aria-hidden="true" />
-          <div class="goose-description">
-            <div class="title">О <span>НАС</span></div>
+          <article class="goose-description">
+            <h2 class="title" id="about-title"><span>О</span> <span>НАС</span></h2>
             <p class="goose-p1">Мы организуем охотничьи туры более 12 лет: лицензии, опытные егеря, проверенные маршруты и безопасность на каждом этапе охоты.
               Охотничье хозяйство «Охотничье поместье» расположено на территории Бешенковичского, Витебского и Сенненского районов Витебской области.
               Общая площадь территории охотничьего хозяйства составляет 58,0 тыс. га в том числе: лесные охотничьи угодья – 25,2 тыс. га, полевые охотничьи угодья – 26,8 тыс. га, водно-болотные охотничьи угодья – 6 тыс. га.   </p>
             <p class="goose-p2">Наши угодья богаты зверем и птицей, обитающими в лесной зоне Центральной Европы.</p>
-          </div>
+          </article>
       </section>
 
-      <section class="season" id="season">
+      <section class="season" id="season" aria-labelledby="season-title">
         <div class="season__content container">
           <img class="target" src="/target.png" alt="">
-          <h2>СЕЗОН ОХОТЫ НА<br />ГУСЕЙ ОТКРЫТ!</h2>
+          <h2 id="season-title"><span>СЕЗОН</span> <span>ОТКРЫТ!</span></h2>
           <div class="season__bottom-text">
             <p>
               С открытием сезона охоты на гуся! Чтоб стая не обходила стороной, дробь
               летела точно, а трофей был жирным и крупным.
             </p>
-            <p>Удачи на крыле!</p>
           </div>
         </div>
       </section>
 
-      <section class="tour-slider-section section" id="tours">
+      <section class="tour-slider-section section" id="tours" aria-labelledby="tours-title">
         <div class="container">
           <div class="tour-slider-section__head">
-            <h2>ОХОТА НА ГУСЯ</h2>
+            <h2 id="tours-title"><span>ОХОТА</span> <span>НА ГУСЯ</span></h2>
             <span></span>
           </div>
 
-          <div class="tour-swiper swiper js-tour-swiper">
-            <div class="swiper-wrapper">
-              <article class="tour-slide swiper-slide">
-                <div class="tour-slide__content">
-                  <h3>ТУР НА 2 ДНЯ ОХОТЫ</h3>
-                  <p>День заезда - 2 дня охоты - День выезда</p>
-                  <p class="tour-slide__old-price">92 000 ₽</p>
-                  <p class="tour-slide__price">от 45 000 ₽</p>
-                  <a class="tour-slide__button js-booking-trigger" href="#">Забронировать тур</a>
-                  <small>Предоплата за бронирование тура 10 000 ₽</small>
-                </div>
-                <div class="tour-slide__media" data-file="Осень 2025" style="--tour-image: url('/tour_1.jpg')"></div>
-              </article>
+          <div class="tour-grid">
+            <article class="tour-slide">
+              <div class="tour-slide__content">
+                <h3>ТУР НА 2 ДНЯ ОХОТЫ</h3>
+                <p>День заезда - 2 дня охоты - День выезда</p>
+                <p class="tour-slide__old-price">92 000 ₽</p>
+                <p class="tour-slide__price">от 45 000 ₽</p>
+                <a class="tour-slide__button js-booking-trigger" href="#">
+                  <span>Забронировать тур</span>
+                  <img src="/ptichka.svg" alt="" aria-hidden="true" />
+                </a>
+                <small>Предоплата за бронирование тура 10 000 ₽</small>
+              </div>
+            </article>
 
-              <article class="tour-slide swiper-slide">
-                <div class="tour-slide__content">
-                  <h3>ТУР НА 3 ДНЯ ОХОТЫ</h3>
-                  <p>День заезда - 3 дня охоты - День выезда</p>
-                  <p class="tour-slide__old-price">135 000 ₽</p>
-                  <p class="tour-slide__price">от 59 000 ₽</p>
-                  <a class="tour-slide__button js-booking-trigger" href="#">Забронировать тур</a>
-                  <small>Предоплата за бронирование тура 10 000 ₽</small>
-                </div>
-                <div class="tour-slide__media" data-file="Зима 2026" style="--tour-image: url('/tour_2.jpg')"></div>
-              </article>
-            </div>
-
-            <div class="tour-swiper__pagination"></div>
+            <article class="tour-slide">
+              <div class="tour-slide__content">
+                <h3>ТУР НА 3 ДНЯ ОХОТЫ</h3>
+                <p>День заезда - 3 дня охоты - День выезда</p>
+                <p class="tour-slide__old-price">135 000 ₽</p>
+                <p class="tour-slide__price">от 59 000 ₽</p>
+                <a class="tour-slide__button js-booking-trigger" href="#">
+                  <span>Забронировать тур</span>
+                  <img src="/ptichka.svg" alt="" aria-hidden="true" />
+                </a>
+                <small>Предоплата за бронирование тура 10 000 ₽</small>
+              </div>
+            </article>
           </div>
+
         </div>
       </section>
 
 
-      <section class="tour-includes section">
+      <section class="tour-includes section" aria-labelledby="includes-title">
         <div class="container">
-          <h2>В СТОИМОСТЬ ТУРА ВХОДИТ</h2>
+          <h2 id="includes-title"><span>ЧТО</span> <span>ВХОДИТ</span></h2>
 
           <div class="tour-includes__panel">
             <article class="tour-includes__item tour-includes__item--active">
@@ -163,21 +184,21 @@
             <article class="tour-includes__item">
               <span class="tour-includes__dot" aria-hidden="true"></span>
               <div class="tour-includes__text">
-                <p>ОРГАНИЗАЦИЯ ДВУХ УТРЕННИХ И ДВУХ ВЕЧЕРНИХ ОХОТ "ПОД КЛЮЧ" / ОРГАНИЗАЦИЯ ТРЕХ УТРЕННИХ И ТРЕХ ВЕЧЕРНИХ ОХОТ "ПОД КЛЮЧ"</p>
+                <p>ОРГАНИЗАЦИЯ ОХОТЫ "ПОД КЛЮЧ"</p>
               </div>
             </article>
 
             <article class="tour-includes__item">
               <span class="tour-includes__dot" aria-hidden="true"></span>
               <div class="tour-includes__text">
-                <p>БАННЫЙ КОМПЛЕКС НА 3 ЧАСА В ЛЮБОЙ ДЕНЬ ПО СОГЛАСОВАНИЮ</p>
+                <p>БАННЫЙ КОМПЛЕКС НА 3 ЧАСА</p>
               </div>
             </article>
 
             <article class="tour-includes__item">
               <span class="tour-includes__dot" aria-hidden="true"></span>
               <div class="tour-includes__text">
-                <p>ПОЛЬЗОВАНИЕ БЕСЕДКОЙ С МАНГАЛОМ НА 8 ЧАСОВ В ЛЮБОЙ ДЕНЬ ПО СОГЛАСОВАНИЮ</p>
+                <p>ПОЛЬЗОВАНИЕ БЕСЕДКОЙ С МАНГАЛОМ И ДРОВАМИ</p>
               </div>
             </article>
 
@@ -208,10 +229,10 @@
         </div>
       </section> -->
 
-      <section class="services-showcase section" id="services">
+      <section class="services-showcase section" id="services" aria-labelledby="services-title">
         <div class="container">
           <div class="tour-slider-section__head services-showcase__head">
-            <h2>УСЛУГИ</h2>
+            <h2 id="services-title"><span>НАШИ</span> <span>УСЛУГИ</span></h2>
             <span></span>
           </div>
 
@@ -274,60 +295,58 @@
         </div>
       </section>
 
-      <section class="trophies-showcase section" id="trophies">
+      <section class="trophies-showcase section" id="trophies" aria-labelledby="trophies-title">
         <div class="container">
           <div class="tour-slider-section__head trophies-showcase__head">
-            <h2>ТРОФЕИ</h2>
+            <h2 id="trophies-title"><span>НАШИ</span> <span>ТРОФЕИ</span></h2>
             <span></span>
           </div>
         </div>
 
-        <div class="trophies-swiper swiper js-trophies-swiper">
-          <div class="swiper-wrapper">
-            <article class="trophies-slide swiper-slide" style="--trophy-image: url('/medved.jpg')"></article>
-            <article class="trophies-slide swiper-slide" style="--trophy-image: url('/chabanjpg.jpg')"></article>
-            <article class="trophies-slide swiper-slide" style="--trophy-image: url('/troff_1.jpg')"></article>
-            <article class="trophies-slide swiper-slide" style="--trophy-image: url('/troff_2.jpg')"></article>
-          </div>
+          <div class="trophies-swiper swiper js-trophies-swiper">
+            <div class="swiper-wrapper">
+              <article class="trophies-slide swiper-slide" data-author="Ф.М. КРУГЛОВ" data-quote="Выезд оказался напряженным, но азартным. Следы привели в густые заросли - пришлось попотеть, но результат того стоил. Трофейный олень, мощные рога, благородная стать. Чувствуешь и уважение к зверю, и гордость за свою выдержку. Спасибо егерям за четкую организацию и честную охоту." style="--trophy-image: url('/medved.jpg')"></article>
+              <article class="trophies-slide swiper-slide" data-author="А.И. МЕЛЬНИК" data-quote="На выезде все было собрано грамотно: дорога, размещение, егерь и сама охота. Очень понравилось, что не было суеты - только дело, природа и точная организация. Такой формат хочется повторить еще не раз." style="--trophy-image: url('/chabanjpg.jpg')"></article>
+              <article class="trophies-slide swiper-slide" data-author="С.В. ЛОБАН" data-quote="Охота получилась по-настоящему мужской: ранний подъем, ожидание, работа по следу и сильные эмоции в финале. Команда знает угодья отлично, поэтому чувствуешь себя уверенно с первого часа. Остались и впечатления, и достойный трофей." style="--trophy-image: url('/troff_1.jpg')"></article>
+              <article class="trophies-slide swiper-slide" data-author="Е.Г. БОРОВИК" data-quote="Больше всего запомнилась атмосфера: тишина леса, грамотное сопровождение и ощущение настоящего приключения. Здесь умеют сделать охоту комфортной, но без потери ее характера. Отличное место для тех, кто ценит сильные впечатления." style="--trophy-image: url('/troff_2.jpg')"></article>
+            </div>
 
           <button class="trophies-swiper__nav trophies-swiper__nav--prev" type="button" aria-label="Назад"></button>
           <button class="trophies-swiper__nav trophies-swiper__nav--next" type="button" aria-label="Вперед"></button>
         </div>
 
         <div class="container">
-          <div class="trophies-quote">
+          <div class="trophies-quote js-trophies-quote">
             <div class="trophies-quote__avatar" aria-hidden="true"></div>
             <div class="trophies-quote__content">
-              <h3>Ф.М. КРУГЛОВ</h3>
-              <p>
-                «Выезд оказался напряженным, но азартным. Следы привели в густые заросли —
-                пришлось попотеть, но результат того стоил. Трофейный олень — мощные рога,
-                благородная стать. Чувствуешь и уважение к зверю, и гордость за свою выдержку.
-                Спасибо егерям за четкую организацию и честную охоту. Однозначно рекомендую тем,
-                кто ценит не просто добычу, а само приключение в дикой природе».
-              </p>
+              <h3 class="js-trophies-author">Ф.М. КРУГЛОВ</h3>
+              <p class="js-trophies-text">«Выезд оказался напряженным, но азартным. Следы привели в густые заросли - пришлось попотеть, но результат того стоил. Трофейный олень, мощные рога, благородная стать. Чувствуешь и уважение к зверю, и гордость за свою выдержку. Спасибо егерям за четкую организацию и честную охоту.»</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="contacts-section section" id="contacts">
+      <section class="contacts-section section" id="contacts" aria-labelledby="contacts-title">
         <div class="container">
           <div class="tour-slider-section__head contacts-section__head">
-            <h2>КОНТАКТЫ</h2>
+            <h2 id="contacts-title"><span>НАШИ</span> <span>КОНТАКТЫ</span></h2>
             <span></span>
           </div>
 
-          <div class="contacts-section__map">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=29.822718879316966%2C54.994496353338285&z=8&pt=29.822718879316966,54.994496353338285,pm2rdm"
-              title="Карта Витебской области"
+          <button class="contacts-section__map js-map-open" type="button" aria-label="Открыть карту на весь экран">
+            <img
+              class="contacts-section__map-preview"
+              src="https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll=29.822718879316966,54.994496353338285&z=8&l=map&size=650,420"
+              alt="Карта Витебской области"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+            />
+            <span class="contacts-section__map-marker" aria-hidden="true">
+              <img src="/logo.svg" alt="" />
+            </span>
+            <span class="contacts-section__map-hint">Открыть карту</span>
+          </button>
 
-          <div class="contacts-section__info">
+          <address class="contacts-section__info">
             <p>Республика Беларусь, Витебская область, Сенненский район, деревня Новоселки</p>
             <p>По вопросам организации охоты и бронирования мест на базе отдыха обращаться:</p>
             <div class="contacts-section__links">
@@ -342,7 +361,7 @@
               <span>•</span>
               <a href="mailto:info@gmail.com">info@gmail.com</a>
             </div>
-          </div>
+          </address>
 
           <p class="contacts-section__copyright">© 2026 Охотничье Поместье. Все права защищены</p>
         </div>
@@ -362,6 +381,17 @@
           <a href="https://max.ru/chat/+375445607774" aria-label="Max" target="_blank" rel="noreferrer">
             <img src="/Max_logo.svg" alt="Max" />
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-modal" aria-hidden="true">
+      <div class="map-modal__backdrop js-map-close"></div>
+      <div class="map-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="map-modal-title">
+        <button class="map-modal__close js-map-close" type="button" aria-label="Закрыть карту"></button>
+        <h3 id="map-modal-title">Карта</h3>
+        <div class="map-modal__frame-wrap">
+          <div class="map-modal__frame js-map-canvas" aria-label="Интерактивная карта"></div>
         </div>
       </div>
     </div>
