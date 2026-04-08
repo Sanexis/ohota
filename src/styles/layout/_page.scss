@@ -77,7 +77,8 @@
 .hero-logo {
   position: absolute;
   z-index: 3;
-  width: 150px;
+  height: 180px;
+  width: auto;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -293,14 +294,18 @@
     align-items: center;
   }
   .hero-logo img {
-    height: 150px;
-    transition: height .25s ease;
-    display: block;
+    height: 180px;
+    width: auto;
+    transform-origin: top center;
+    transition: transform 0.25s ease;
+  }
+
+  .header--small .hero-logo {
+    align-self: flex-start;
   }
 
   .header--small .hero-logo img {
-    height: 80px;
-    width: auto;
+    transform: scale(0.43);
   }
 }
 
@@ -345,6 +350,7 @@
     left: auto;
     transform: none;
     width: 58px;
+    height: 58px;
   }
 
   .hero-header__burger {
@@ -570,14 +576,12 @@
   justify-content: space-evenly;
 
   img{
-    flex-shrink: 1;
-    width: 400px;
-    height: 400px;
+    max-width: 510px;
   }
 
   .goose-description{
     max-width: 510px;
-    font-family: 'Alegreya', Georgia, serif;
+    font-family: 'Playfair Display', serif;
 
     .title{
       font-size: 34px;
@@ -590,8 +594,10 @@
       }
     }
 
-    .goose-p2{
+    .goose-p1, .goose-p2{
       margin-top: 10px;
+      font-family: 'Alegreya', serif;
+      font-size: 20px;
     }
   }
 }
@@ -616,7 +622,7 @@
     position: absolute;
     width: clamp(320px, 62vw, 900px);
     left: 50%;
-    z-index: 12;
+    z-index: 4;
     top: 50%;
     transform: translate(-50%, -50%);
   }
@@ -625,20 +631,23 @@
 .season__content h2 {
   position: relative;
   z-index: 5;
-  color: #bdb58a;
   font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #A6A27F;
   font-size: clamp(3rem, 7vw, 5.6rem);
   font-weight: 800;
-  line-height: 0.96;
+  line-height: 1.2;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  vertical-align: middle;
+  font-variation-settings: "wght" 960;
+
 }
 
 .season__content p {
   position: relative;
   z-index: 5;
   max-width: 840px;
-  color: #bdb58a;
+  color: #A6A27F;
   font-family: 'Manrope', 'Segoe UI', sans-serif;
   font-size: clamp(1.2rem, 2vw, 1.35rem);
   font-weight: 700;
@@ -670,7 +679,10 @@
 }
 
 .tour-slider-section__head h2 {
-  color: #fff;
+  background: linear-gradient(90deg, #ffffff 0%,#ffffff 30%,  #7C7858 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: clamp(2.6rem, 5vw, 4.3rem);
   text-align: center;
 }
@@ -705,7 +717,7 @@
   border-radius: 50%;
   background: #efd400;
   transform: translate(50%, -50%);
-  box-shadow: 0 0 18px rgb(239 212 0 / 0.45);
+  box-shadow: 0 0 12.5px 6px #FFC30863;
 }
 
 .tour-swiper {
@@ -864,7 +876,7 @@
 
 .tour-includes__item--active .tour-includes__dot {
   background: #f0d400;
-  box-shadow: 0 0 18px rgb(240 212 0 / 0.8);
+  box-shadow: 0 0 12.5px 6px #FFC30863;
 }
 
 .tour-includes__text {
