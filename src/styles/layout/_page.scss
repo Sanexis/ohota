@@ -268,25 +268,25 @@
   display: inline;
 }
 
-.hero-card h1 span:first-child,
-.goose .goose-description .title span:first-child,
-.season__content h2 span:first-child,
-.tour-slider-section__head h2 span:first-child,
-.tour-includes h2 span:first-child,
-.services-showcase__head h2 span:first-child,
-.trophies-showcase__head h2 span:first-child,
-.contacts-section__head h2 span:first-child {
+.hero-card h1 > span:first-child,
+.goose .goose-description .title > span:first-child,
+.season__content h2 > span:first-child,
+.tour-slider-section__head h2 > span:first-child,
+.tour-includes h2 > span:first-child,
+.services-showcase__head h2 > span:first-child,
+.trophies-showcase__head h2 > span:first-child,
+.contacts-section__head h2 > span:first-child {
   color: #fff;
 }
 
-.hero-card h1 span:last-child,
-.goose .goose-description .title span:last-child,
-.season__content h2 span:last-child,
-.tour-slider-section__head h2 span:last-child,
-.tour-includes h2 span:last-child,
-.services-showcase__head h2 span:last-child,
-.trophies-showcase__head h2 span:last-child,
-.contacts-section__head h2 span:last-child {
+.hero-card h1 > span:last-child,
+.goose .goose-description .title > span:last-child,
+.season__content h2 > span:last-child,
+.tour-slider-section__head h2 > span:last-child,
+.tour-includes h2 > span:last-child,
+.services-showcase__head h2 > span:last-child,
+.trophies-showcase__head h2 > span:last-child,
+.contacts-section__head h2 > span:last-child {
   color: #a6a27f;
 }
 
@@ -808,10 +808,6 @@
 }
 
 .tour-slider-section__head h2 {
-  background: linear-gradient(90deg, #ffffff 0%,#ffffff 30%,  #7C7858 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-size: clamp(2.6rem, 5vw, 4.3rem);
   text-align: center;
 }
@@ -853,7 +849,6 @@
   //padding-bottom: 46px;
 }
 
-.tour-slide {
 .tour-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
