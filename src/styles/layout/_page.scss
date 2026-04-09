@@ -41,7 +41,7 @@
 .hero-header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 20;
+  z-index: 100;
   width: 100%;
   background: rgb(0 0 0 / 0.72);
   backdrop-filter: blur(14px);
@@ -98,7 +98,7 @@
   object-fit: cover;
   border-radius: 50%;
 
-  @media (max-width: 950px) {
+  @media (max-width: 1100px) {
     width: 72px;
   }
 }
@@ -358,7 +358,6 @@
 .hero__edge {
   position: sticky;
   top: 0;
-  z-index: 100;
   width: 100%;
 }
 
@@ -408,11 +407,12 @@
   font-size: 1.4rem;
 }
 
-@media (min-width: 981px) {
+@media (min-width: 1100px) {
   .hero-logo {
     display: flex;
     justify-content: center;
   }
+
   .hero-header__inner {
     display: flex;
     align-items: center;
@@ -434,13 +434,19 @@
 }
 
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .hero-logo {
     position: relative;
     top: 0;
     left: auto;
     transform: none;
     margin-top: 0;
+    width: 58px;
+    height: 58px;
+  }
+
+  .hero__body {
+    min-height: calc(100dvh - 88px);
   }
 
   .hero-header__panel {
@@ -460,7 +466,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 825px) {
   body.menu-open {
     overflow: hidden;
   }
@@ -673,7 +679,7 @@
   .hero__body {
     padding-top: calc(var(--header-height, 76px) + 28px);
     padding-bottom: 42px;
-    min-height: calc(100dvh - 88px);
+    min-height: calc(103dvh - 88px);
   }
 
   .hero-card {
@@ -738,6 +744,7 @@
     .goose-p1, .goose-p2{
       margin-top: 10px;
       font-size: 20px;
+      text-align: justify
     }
   }
 }
@@ -1302,6 +1309,7 @@
   color: #cfcfcf;
   font-size: 1.15rem;
   line-height: 1.15;
+  text-align: justify
 }
 
 .trophies-swiper .swiper-pagination,
@@ -1825,7 +1833,7 @@
 
   .contacts-section__footer-meta {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .contacts-section__creator {
