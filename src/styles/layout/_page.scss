@@ -11,10 +11,9 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
-  overflow: hidden;
+  overflow: visible;
   background: #0b0a08;
+    min-height: clamp(500px, 80vh, 900px);
 }
 
 .hero__backdrop {
@@ -222,8 +221,7 @@
   z-index: 2;
   display: grid;
   place-items: center;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(90dvh - 88px);
   padding-top: calc(var(--header-height, 88px) + 40px);
   padding-bottom: 76px;
 }
@@ -358,16 +356,10 @@
 }
 
 .hero__edge {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100%;
-  pointer-events: none;
-  height: auto;
-  object-fit: cover;
-  transform: translateY(48%);
 }
 
 .section {
@@ -681,6 +673,7 @@
   .hero__body {
     padding-top: calc(var(--header-height, 76px) + 28px);
     padding-bottom: 42px;
+    min-height: calc(100dvh - 88px);
   }
 
   .hero-card {
@@ -701,7 +694,7 @@
 
   .hero__edge {
     width: 100%;
-    transform: translateY(16%);
+    transform: translateY(3%);
   }
 
   .section {
