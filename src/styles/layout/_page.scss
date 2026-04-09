@@ -78,7 +78,7 @@
 .hero-contact__phone {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 20px;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -241,7 +241,7 @@
 }
 
 .hero-card h1,
-.goose .goose-description .title,
+.goose .goose-description .title span,
 .season__content h2,
 .tour-slider-section__head h2,
 .tour-includes h2,
@@ -321,27 +321,40 @@
   box-shadow: 0 0 0 1px rgb(0 0 0 / 0.72) inset, 0 8px 20px rgb(0 0 0 / 0.35);
   color: #fff;
   text-decoration: none;
-  font-family: 'Platypi', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(0.88rem, 1.45vw, 1rem);
+  font-size: clamp(1.2rem, 1.45vw, 1.5rem);
   text-align: center;
   white-space: normal;
   line-height: 1.1;
+  transition: all 0.25s ease;
 }
+.hero-card__button:hover {
+  transform: translateY(-2px);
+
+  border-color: #FFC30880;
+
+  box-shadow:
+    0 0 13px 8px #FFC30880,
+    0 10px 15px rgba(0, 0, 0, 0.45);
+}
+
 
 .hero-card__button span {
   width: 100%;
   text-align: center;
+  padding-left: 40px;
+  color:#ffd900 ;
 }
 
 .hero-card__button img {
   position: absolute;
-  right: -8px;
+  right: -1px;
   bottom: -16px;
   width: 76px;
   height: auto;
   object-fit: contain;
   pointer-events: none;
+  top: 36px
 }
 
 .hero__edge {
@@ -703,7 +716,7 @@
 @media (max-width: 1400px) {
     .hero__edge {
       width: 100%;
-      bottom: -60px;
+      bottom: -30px;
     }
 }
 
@@ -717,11 +730,9 @@
 
   .goose-description{
     max-width: 510px;
-    font-family: 'Playfair Display', serif;
 
     p {
       color: #fff;
-      font-family: 'Alegreya', Georgia, serif;
     }
 
     .title{
@@ -733,7 +744,6 @@
 
     .goose-p1, .goose-p2{
       margin-top: 10px;
-      font-family: 'Alegreya', serif;
       font-size: 20px;
     }
   }
@@ -1148,6 +1158,14 @@
   background: rgb(24 24 24 / 0.46);
   backdrop-filter: blur(2px);
   transform: translateY(-50%);
+
+  transition: all 0.25s ease;
+}
+
+.service-media__nav:hover {
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 0 18px rgba(239, 212, 0, 0.49);
+  background: rgb(24 24 24 / 0.7);
 }
 
 .service-media__nav::before {
@@ -1228,6 +1246,12 @@
   transform: translateY(-50%);
 }
 
+.trophies-swiper__nav:hover {
+  transform: translateY(-50%) translateY(-2px);
+  box-shadow: 0 0 18px rgba(239, 212, 0, 0.49);
+  background: rgb(24 24 24 / 0.7);
+}
+
 .trophies-swiper__nav::before {
   content: '';
   position: absolute;
@@ -1276,7 +1300,6 @@
 
 .trophies-quote__content h3 {
   color: #efefef;
-  font-family: 'Platypi', Georgia, serif;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -1284,7 +1307,6 @@
 .trophies-quote__content p {
   margin-top: 16px;
   color: #cfcfcf;
-  font-family: 'Platypi', Georgia, serif;
   font-size: 1.15rem;
   line-height: 1.15;
 }
@@ -1487,12 +1509,7 @@
 
 .contacts-section__info p {
   color: #d0d0d0;
-  font-family: 'Alegreya', Georgia, serif;
   font-size: 1.08rem;
-}
-
-.contacts-section__info p + p {
-  margin-top: 18px;
 }
 
 .contacts-section__links {
@@ -1508,7 +1525,6 @@
 .contacts-section__links span {
   color: #f0f0f0;
   text-decoration: none;
-  font-family: 'Alegreya', Georgia, serif;
   font-size: 1.2rem;
 }
 
