@@ -1544,9 +1544,36 @@
 }
 
 .contacts-section__copyright {
-  margin-top: 48px;
   color: #8b8b8b;
   font-size: 0.8rem;
+}
+
+.contacts-section__footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.contacts-section__creator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+
+  span{
+    color: #fff!important;
+
+  }
+}
+
+.contacts-section__creator img {
+  width: 158px;
+  height: auto;
+  object-fit: contain;
 }
 
 .booking-modal {
@@ -1794,6 +1821,16 @@
 
   .contacts-section__links {
     gap: 10px;
+  }
+
+  .contacts-section__footer-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts-section__creator {
+    justify-content: flex-start;
+    white-space: normal;
   }
 
   .booking-modal__dialog {
