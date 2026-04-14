@@ -459,7 +459,15 @@
   }
 
   .hero-contact {
-    gap: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-contact__socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .grid-block {
@@ -515,8 +523,7 @@
     transform: translateY(0);
   }
 
-  .hero-nav,
-  .hero-contact {
+  .hero-nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1404,7 +1411,7 @@
 .contacts-section__map iframe {
   display: block;
   width: 100%;
-  height: 430px;
+  height: 100%;
   border: 0;
 }
 
@@ -1447,7 +1454,7 @@
 }
 
 .map-modal__dialog h3 {
-  margin-bottom: 14px;
+  margin-bottom: 35px;
   color: #fff;
   font-size: 1.15rem;
 }
@@ -1457,6 +1464,12 @@
   height: calc(100% - 34px);
   overflow: hidden;
   border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+
+  @media (max-width: 750px) {
+    height: calc(98% - 34px);
+  }
 }
 
 .map-modal__frame {
